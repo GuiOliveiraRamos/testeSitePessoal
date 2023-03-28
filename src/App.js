@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { GrMenu } from "react-icons/gr";
 import styled from "styled-components";
 
@@ -15,27 +14,14 @@ export default function App() {
       </NavBar>
       <body>
         <Container>
-          <ContainerInfo>
+          <ContainerImg>
             <h2>SERVIÇOS DE PROGRAMAÇÃO</h2>
-
-          </ContainerInfo>
-          <h3>
-              Desenvolvimento de sites, lojas virtuais, aplicativos e softwares.
-            </h3>
-            <h4>Especializado em ReactJS</h4>
+            <h4>Desenvolvedor Front-end</h4>
+          </ContainerImg>
           <ContainerInfo>
-            <h2>SERVIÇOS DE PROGRAMAÇÃO</h2>
             <h3>
-              Desenvolvimento de sites, lojas virtuais, aplicativos e softwares.
+              Desenvolvimento de sites, aplicativos e softwares.
             </h3>
-            <h4>Especializado em ReactJS</h4>
-          </ContainerInfo>
-          <ContainerInfo>
-            <h2>SERVIÇOS DE PROGRAMAÇÃO</h2>
-            <h3>
-              Desenvolvimento de sites, lojas virtuais, aplicativos e softwares.
-            </h3>
-            <h4>Especializado em ReactJS</h4>
           </ContainerInfo>
         </Container>
       </body>
@@ -76,45 +62,58 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
-const ContainerInfo = styled.div`
+const ContainerImg = styled.div`
   width: 300px;
   height: 150px;
   padding: 50px;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 15px;
   background-image: url(https://blog.xpeducacao.com.br/wp-content/uploads/2022/08/o-que-faz-um-programador-1.jpg);
   background-repeat: no-repeat;
   opacity: 0.9;
   background-size: cover;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: red;
 
-  h2,
-  h3,
   h4 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+  h2 {
     color: #000000;
-    margin-bottom: 15px;
     &:hover {
-     color: green;
+      color: green;
     }
 
   }
 
   h2 {
-    font-family: 'anton';
+    font-family: "anton";
     font-size: 45px;
   }
+`;
+
+const ContainerInfo = styled.div`
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   h3 {
     font-size: 20px;
-    font-weight: 500;
     margin-bottom: 30px;
-  }
-  h4 {
-    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
   }
 `;
